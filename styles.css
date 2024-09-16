@@ -1,0 +1,109 @@
+/* Основные стили */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("https://i.pinimg.com/736x/d4/a0/f5/d4a0f5b2b21364b192aa0c98a88ebf57.jpg") center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.nav a:hover {
+    background-color: #575757;
+}
+
+.content, .fieldset-1, .fieldset-2, .fieldset-3, .fieldset-4, .fieldset-5, .fieldset-6, .fieldset-8 {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fieldset-1 {
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.fieldset-5, .fieldset-6 {
+    width: 20%;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fieldset-4 {
+    width: 80%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ 
+.image-row img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
+.image-sukuna-gojo {
+    height: 350px;
+    width: auto;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+.h3-1, .h3-2 {
+    color: black;
+}
+
+.links-trio {
+    text-decoration: none;
+    color: red;
+}
+
+footer {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
