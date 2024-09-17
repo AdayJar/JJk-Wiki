@@ -4,128 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jujutsu Kaisen WIKI</title>
-    <style>
-        body {
-            background: url("https://wallpapercat.com/w/full/0/f/4/24693-3840x2160-desktop-4k-jujutsu-kaisen-tv-series-background-photo.jpg") center/cover no-repeat fixed;
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-        nav {
-            background-color: #333;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        .side-nav {
-            position: fixed;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            width: 150px;
-            height: 150px;
-            border: 2px solid white;
-            border-radius: 10px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .side-nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 100%;
-        }
-        .side-nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .side-nav a:hover {
-            color: #ffcc00;
-        }
-        main {
-            margin-right: 200px;
-            padding: 20px;
-        }
-        figure {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        figure img {
-            border: 10px solid white;
-            height: 200px;
-            width: auto;
-            margin-right: 20px;
-        }
-        figcaption {
-            max-width: 500px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-        hr {
-            border: none;
-            border-top: 2px solid white;
-            width: 40%;
-            margin: 20px auto;
-        }
-    </style>
+    <link rel="stylesheet" href="styles5.css">
 </head>
 <body>
     <header>
         <h1>Jujutsu Kaisen WIKI</h1>
-        <nav>
+        <nav class="main-nav">
             <ul>
                 <li><a href="file:///C:/Users/user/Desktop/web%20in%20university/JJK.html" target="_blank">Main</a></li>  
                 <li><a href="file:///C:/Users/user/Desktop/web%20in%20university/JJK2.html" target="_blank">Characters</a></li>  
                 <li><a href="file:///C:/Users/user/Desktop/web%20in%20university/3%20(5).html" target="_blank">Gege Akutami</a></li>
                 <li><a href="file:///C:/Users/user/Desktop/web%20in%20university/4%20(4).html" target="_blank">History of Creation</a></li>
                 <li><a href="file:///C:/Users/user/Desktop/web%20in%20university/6%20(3).html" target="_blank">Anime Season 3</a></li>
-
-
             </ul>
         </nav>
     </header>
-    <nav class="side-nav">
+    
+    <nav id="fixed-sidebar">
         <ul>
             <li><a href="#section1">Info</a></li>
             <li><a href="#section2">Ranking</a></li>
             <li><a href="#footer">About</a></li>
         </ul>
     </nav>
+    
     <main>
         <section id="section1">
             <h2>Info</h2>
@@ -141,8 +43,9 @@
 
         <section id="section2">
             <h2>Ranking</h2>
+            
             <article>
-                <h2>1. Satoru Gojo</h2>
+                <h3>1. Satoru Gojo</h3>
                 <figure>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREm5H1fDFItJ1-_029akB1eB4A1Vz1hX3EfwLABLvYSrm6oBNW-KKoZUCHAeXdc7-gtEk&usqp=CAU" alt="Satoru Gojo">
                     <figcaption>
@@ -151,8 +54,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>2. Megumi Fushiguro</h2>
+                <h3>2. Megumi Fushiguro</h3>
                 <figure>
                     <img src="https://i.pinimg.com/474x/bc/6d/6d/bc6d6df4f7f7e39282a6a1af9ca501d1.jpg" alt="Megumi Fushiguro">
                     <figcaption>
@@ -160,8 +64,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>3. Yuji Itadori</h2>
+                <h3>3. Yuji Itadori</h3>
                 <figure>
                     <img src="https://i.pinimg.com/736x/d4/98/7d/d4987d84727f0989e7feeb5109695393.jpg" alt="Yuji Itadori">
                     <figcaption>
@@ -169,8 +74,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>4. Yuta Okkotsu</h2>
+                <h3>4. Yuta Okkotsu</h3>
                 <figure>
                     <img src="https://64.media.tumblr.com/115b3fab76eb49d56280c85764da673f/5ea27c02ab04f5d1-20/s540x810/f6ed79ba7a68fb5d59386a11450909be44113ebe.png" alt="Yuta Okkotsu">
                     <figcaption>
@@ -178,8 +84,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>5. Ryomen Sukuna</h2>
+                <h3>5. Ryomen Sukuna</h3>
                 <figure>
                     <img src="https://64.media.tumblr.com/6a32dfdf6166d93a5ce294205ab7fe8c/4a904ad58e8c98e6-0f/s1280x1920/35aeea7d10c1bfb0ff112a427210cc2b3fd80725.png" alt="Ryomen Sukuna">
                     <figcaption>
@@ -187,8 +94,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>6. Kugisaki Nobara</h2>
+                <h3>6. Kugisaki Nobara</h3>
                 <figure>
                     <img src="https://i.pinimg.com/474x/74/b5/96/74b59634234a3afd3b749126012c6d9f.jpg" alt="Kugisaki Nobara">
                     <figcaption>
@@ -196,8 +104,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>7. Maki Zenin</h2>
+                <h3>7. Maki Zenin</h3>
                 <figure>
                     <img src="https://i.pinimg.com/originals/29/73/14/2973141f7d60f3df31ab6765e9475691.jpg" alt="Maki Zenin">
                     <figcaption>
@@ -205,8 +114,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>8. Kento Nanami</h2>
+                <h3>8. Kento Nanami</h3>
                 <figure>
                     <img src="https://i.pinimg.com/originals/53/8a/cf/538acf37ca61c72fb3ce7e62e87006ad.png" alt="Kento Nanami">
                     <figcaption>
@@ -214,8 +124,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>9. Aoi Todo</h2>
+                <h3>9. Aoi Todo</h3>
                 <figure>
                     <img src="https://pbs.twimg.com/media/GAlwDVfaQAAhwNK.jpg" alt="Aoi Todo">
                     <figcaption>
@@ -223,8 +134,9 @@
                     </figcaption>
                 </figure>
             </article>
+
             <article>
-                <h2>10. Mei Mei</h2>
+                <h3>10. Mei Mei</h3>
                 <figure>
                     <img src="https://64.media.tumblr.com/d51027f14800a93410eef4c5349fc5ed/9dccb3b31b59fd12-ff/s250x400/8169112bac28e55d4246b01d8a66138bb6d7fbd2.png" alt="Mei Mei">
                     <figcaption>
@@ -232,6 +144,7 @@
                     </figcaption>
                 </figure>
             </article>
+            
         </section>
     </main>
 
@@ -243,3 +156,5 @@
     </footer>
 </body>
 </html>
+
+              

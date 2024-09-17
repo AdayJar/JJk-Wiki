@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    background: url("https://wallpapercat.com/w/full/0/f/4/24693-3840x2160-desktop-4k-jujutsu-kaisen-tv-series-background-photo.jpg") center/cover no-repeat fixed;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.main-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.main-nav a:hover {
+    color: #ffcc00;
+}
+
+/* Fixed Sidebar Navigation */
+#fixed-sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fixed-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+#fixed-sidebar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+#fixed-sidebar a:hover {
+    color: #ffcc00;
+}
+
+/* Main Content */
+main {
+    margin-right: 200px;
+    padding: 20px;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+figure img {
+    border: 10px solid white;
+    height: 200px;
+    width: auto;
+    margin-right: 20px;
+}
+figcaption {
+    max-width: 500px;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid white;
+    width: 40%;
+    margin: 20px auto;
+}
