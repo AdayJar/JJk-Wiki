@@ -97,6 +97,16 @@ h1, h2, h3 {
     text-decoration: none;
     color: red;
 }
+.card-text {
+    margin: 5 !important;
+    padding: 5 !important;
+}
+.card-title{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
 
 footer {
     text-align: center;
