@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jujutsu Kaisen Wiki</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Wiki</a>
+            <a class="navbar-brand" href="#">Jujutsu Kaisen Wiki</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- justify-content-end для выравнивания вправо -->
+                <ul class="navbar-nav"> 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="JJK.html">Main</a>
+                        <a class="nav-link" href="JJK.html">Main</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="JJK2.html">Characters</a>
@@ -25,310 +25,408 @@
                         <a class="nav-link" href="3.html">Gege Akutami</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="4.html">History of creation</a>
+                        <a class="nav-link" href="4.html">History of creation</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="6.html">Anime Season 3</a>
+                        <a class="nav-link" href="6.html">Anime Season 3</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="5.html">Popularity Ranking</a>
+                        <a class="nav-link" href="5.html">Popularity Ranking</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
     <main class="container mt-4">
         <div class="row">
-            <div class="col-md-8">
-                <h2>Characters</h2>
-                <div class="row">
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <img src="https://static.wikia.nocookie.net/jujutsukaisen/images/4/46/Yuji_Itadori_Manga.png/revision/latest/scale-to-width-down/250?cb=20210518225637&path-prefix=pt-br" 
-                                         class="img-fluid rounded-start" alt="Itadori Yuji Image">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Itadori Yuji</h5>
-                                        <p class="card-text">Yuji Itadori is a student at Jujutsu High who gains cursed energy powers after consuming Sukuna's finger.</p>
-                                        <ul class="list-unstyled">
-                                            <li><strong>Role:</strong> Student at Jujutsu High</li>
-                                            <li><strong>Rank:</strong> Grade 1 sorcerer</li>
-                                            <li><strong>Physical Strength:</strong> Exceptional</li>
-                                            <li><strong>Cursed Energy:</strong> High, capable of using Black Flash</li>
-                                            <li><strong>Notable Skills:</strong> Host of Sukuna, quick reflexes, strong determination</li>
-                                        </ul>
-                                    </div>
-                                </div>
+            <!-- Карточка слева -->
+            <div class="col-md-6 mb-4">
+                <h2 class="mb-3">Characters</h2>
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center">
+                            <img src="https://static.wikia.nocookie.net/jujutsukaisen/images/4/46/Yuji_Itadori_Manga.png/revision/latest/scale-to-width-down/250?cb=20210518225637&path-prefix=pt-br" 
+                                 class="img-fluid rounded-start" alt="Itadori Yuji Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Itadori Yuji</h5>
+                                <p class="card-text">Yuji Itadori is a student at Jujutsu High who gains cursed energy powers after consuming Sukuna's finger.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Role:</strong> Student at Jujutsu High</li>
+                                    <li><strong>Rank:</strong> Grade 1 sorcerer</li>
+                                    <li><strong>Physical Strength:</strong> Exceptional</li>
+                                    <li><strong>Cursed Energy:</strong> High, capable of using Black Flash</li>
+                                    <li><strong>Notable Skills:</strong> Host of Sukuna, quick reflexes, strong determination</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+    
+            <!-- Видео справа -->
+            <div class="col-md-6 mb-4">
+                <h2 class="mb-3">Video</h2>
+                <iframe width="100%" height="290" src="https://www.youtube.com/embed/TC8BoupS4G0?si=0lfxkySpQoaycGsb&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
 
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <img src="https://png.klev.club/uploads/posts/2024-04/thumbs/png-klev-club-95bk-p-godzho-manga-png-2.png" 
-                                         class="img-fluid rounded-start" alt="Gojo Satoru Image">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Gojo Satoru</h5>
-                                        <p class="card-text">Gojo Satoru is a teacher at Jujutsu High and one of the strongest Jujutsu Sorcerers.</p>
-                                        <ul class="list-unstyled">
-                                            <li><strong>Role:</strong> Teacher at Jujutsu High</li>
-                                            <li><strong>Rank:</strong> Special Grade Sorcerer</li>
-                                            <li><strong>Physical Strength:</strong> Extraordinary</li>
-                                            <li><strong>Cursed Energy:</strong> Extremely high, capable of using Limitless Cursed Technique</li>
-                                            <li><strong>Ability:</strong> Mastery of Limitless Cursed Technique and Six Eyes</li>
-                                            <li><strong>Notable Skills:</strong> Immense combat prowess, mastery of Cursed Techniques, strategic intelligence</li>
-                                        </ul>
-                                    </div>
-                                </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center">
+                            <img src="https://png.klev.club/uploads/posts/2024-04/thumbs/png-klev-club-95bk-p-godzho-manga-png-2.png" 
+                                 class="img-fluid rounded-start" alt="Gojo Satoru Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Gojo Satoru</h5>
+                                <p class="card-text">Gojo Satoru is a teacher at Jujutsu High and one of the strongest Jujutsu Sorcerers.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Role:</strong> Teacher at Jujutsu High</li>
+                                    <li><strong>Rank:</strong> Special Grade Sorcerer</li>
+                                    <li><strong>Physical Strength:</strong> Extraordinary</li>
+                                    <li><strong>Cursed Energy:</strong> Extremely high, capable of using Limitless Cursed Technique</li>
+                                    <li><strong>Ability:</strong> Mastery of Limitless Cursed Technique and Six Eyes</li>
+                                    <li><strong>Notable Skills:</strong> Immense combat prowess, mastery of Cursed Techniques, strategic intelligence</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7040e917-2676-4436-838b-34c95352f75f/dep2ruf-da710594-5519-4ad0-a3d3-4d173f9cd9f9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzcwNDBlOTE3LTI2NzYtNDQzNi04MzhiLTM0Yzk1MzUyZjc1ZlwvZGVwMnJ1Zi1kYTcxMDU5NC01NTE5LTRhZDAtYTNkMy00ZDE3M2Y5Y2Q5ZjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WakU32znOXGweR3JI-w4i3O8vncXPnGf2u-UP6n69oM" class="img-fluid rounded-start" alt="Fushiguro Megumi Image">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Fushiguro Megumi</h5>
-                                        <p class="card-text">Megumi Fushiguro is a student at Jujutsu High with a powerful Cursed Technique.</p>
-                                        <ul class="list-unstyled">
-                                            <li><strong>Role:</strong> Student at Jujutsu High</li>
-                                            <li><strong>Rank:</strong> Grade 2 Sorcerer</li>
-                                            <li><strong>Physical Strength:</strong> High</li>
-                                            <li><strong>Cursed Energy:</strong> High, specializes in Shikigami Summoning</li>
-                                            <li><strong>Ability:</strong> Mastery of Ten Shadows Technique, summoning Shikigami</li>
-                                            <li><strong>Notable Skills:</strong> Strategic combat, strong Shikigami, skilled in Cursed Techniques</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
+                </div>
+            </div>
+    
+            <!-- Видео справа -->
+            <div class="col-md-6 mb-4">
+                <iframe width="100%" height="360" src="https://www.youtube.com/embed/SUMQy3QHPTA?si=Cs19tL0p1vR0d9GO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+            </div>
+        
+    
+            <div class="col-md-6 mb-4 mb-4">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-4 d-flex justify-content-center align-items-center">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7040e917-2676-4436-838b-34c95352f75f/dep2ruf-da710594-5519-4ad0-a3d3-4d173f9cd9f9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzcwNDBlOTE3LTI2NzYtNDQzNi04MzhiLTM0Yzk1MzUyZjc1ZlwvZGVwMnJ1Zi1kYTcxMDU5NC01NTE5LTRhZDAtYTNkMy00ZDE3M2Y5Y2Q5ZjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WakU32znOXGweR3JI-w4i3O8vncXPnGf2u-UP6n69oM" class="img-fluid rounded-start" alt="Fushiguro Megumi Image">
                         </div>
-                    
-                        <div class="col-md-10 mb-4">
-                            <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/7d/Nobara_Kugisaki_%28Volume_3%29.png/revision/latest/scale-to-width-down/250?cb=20200604153117" class="img-fluid rounded-start" alt="Kugisaki Nobara Image">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Kugisaki Nobara</h5>
-                                        <p class="card-text">Nobara Kugisaki is a student at Jujutsu High with a unique approach to Cursed Techniques.</p>
-                                        <ul class="list-unstyled">
-                                            <li><strong>Role:</strong> Student at Jujutsu High</li>
-                                            <li><strong>Rank:</strong> Grade 2 Sorcerer</li>
-                                            <li><strong>Physical Strength:</strong> Strong</li>
-                                            <li><strong>Cursed Energy:</strong> High, specializes in Straw Doll Techniques</li>
-                                            <li><strong>Ability:</strong> Mastery of Straw Doll Cursed Technique, uses nails and hammer</li>
-                                            <li><strong>Notable Skills:</strong> Fearless combat style, strong resolve, effective Cursed Techniques</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    
-                        <div class="col-md-10 mb-4">
-                            <div class="card">
-                            <div class="row g-0">
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/79/Yuta_Okkotsu_%28Chapter_137%29.png/revision/latest?cb=20210206114343&path-prefix=ru" class="img-fluid rounded-start" alt="Okkotsu Yuta Image">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Okkotsu Yuta</h5>
-                                        <p class="card-text">Yuta Okkotsu is a former student at Jujutsu High and a powerful Sorcerer.</p>
-                                        <ul class="list-unstyled">
-                                            <li><strong>Role:</strong> Former Student at Jujutsu High</li>
-                                            <li><strong>Rank:</strong> Special Grade Sorcerer</li>
-                                            <li><strong>Physical Strength:</strong> Exceptional</li>
-                                            <li><strong>Cursed Energy:</strong> Extremely high, wielder of Rika Orimoto’s Curse</li>
-                                            <li><strong>Ability:</strong> Mastery of Rika Orimoto’s Curse, powerful Cursed Energy manipulation</li>
-                                            <li><strong>Notable Skills:</strong> Immense cursed energy, formidable combat abilities, strong protective curse</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    
-                        <div class="col-md-10 mb-4">
-                            <div class="card">
-                              <div class="row g-0">
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/d/d8/Toge_Inumaki_%28Prequel%29.png/revision/latest?cb=20201028145231&path-prefix=ru" class="img-fluid rounded-start" alt="Inumaki Toge Image">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Inumaki Toge</h5>
-                                        <p class="card-text">Toge Inumaki is a student at Jujutsu High who uses his Cursed Speech Technique to control others.</p>
-                                        <ul class="list-unstyled">
-                                            <li><strong>Role:</strong> Student at Jujutsu High</li>
-                                            <li><strong>Rank:</strong> Grade 2 Sorcerer</li>
-                                            <li><strong>Physical Strength:</strong> Moderate</li>
-                                            <li><strong>Cursed Energy:</strong> High, specializes in Cursed Speech</li>
-                                            <li><strong>Ability:</strong> Mastery of Cursed Speech, can compel actions through words</li>
-                                            <li><strong>Notable Skills:</strong> Strategic use of language, effective support role in battles</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                          <div class="row g-0">
-                            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/9/9a/Toji_Fushiguro.png/revision/latest?cb=20201104084033&path-prefix=ru" class="img-fluid rounded-start" alt="Fushiguro Toji Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Fushiguro Toji</h5>
-                                    <p class="card-text">Toji Fushiguro is a former Jujutsu Sorcerer known for his exceptional combat skills and cursed technique.</p>
-                                    <ul class="list-unstyled">
-                                        <li><strong>Role:</strong> Former Sorcerer</li>
-                                        <li><strong>Rank:</strong> Special Grade Sorcerer</li>
-                                        <li><strong>Physical Strength:</strong> Extraordinary</li>
-                                        <li><strong>Cursed Energy:</strong> Low, utilizes physical prowess and cursed tools</li>
-                                        <li><strong>Notable Skills:</strong> Mastery of combat techniques, skilled in using cursed tools, great strategic mind</li>
-                                    </ul>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                            
-                        <div class="row g-0">
-                            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                <img src="https://static.wikia.nocookie.net/fiction-characters-battle/images/a/a9/Ryomen_Sukuna.png/revision/latest?cb=20220103131855&path-prefix=ru" class="img-fluid rounded-start" alt="Sukuna Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sukuna</h5>
-                                    <p class="card-text">Sukuna is a powerful Cursed Spirit and the King of Curses.</p>
-                                    <ul class="list-unstyled">
-                                        <li><strong>Role:</strong> Main Antagonist</li>
-                                        <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
-                                        <li><strong>Physical Strength:</strong> Extremely high</li>
-                                        <li><strong>Cursed Energy:</strong> Extremely high, formidable Cursed Techniques</li>
-                                        <li><strong>Notable Skills:</strong> Mastery of various Cursed Techniques, immense combat power, regeneration</li>
-                                    </ul>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                          <div class="row g-0">
-                            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/72/Jogo_manga.png/revision/latest?cb=20201207113644&path-prefix=ru" class="img-fluid rounded-start" alt="Jogo Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Jogo</h5>
-                                    <p class="card-text">Jogo is a powerful Cursed Spirit known for his volcanic powers.</p>
-                                    <ul class="list-unstyled">
-                                        <li><strong>Role:</strong> Antagonist</li>
-                                        <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
-                                        <li><strong>Physical Strength:</strong> Very high</li>
-                                        <li><strong>Cursed Energy:</strong> High, specializes in fire-based attacks</li>
-                                        <li><strong>Notable Skills:</strong> Volcanic abilities, high durability, destructive power</li>
-                                    </ul>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                          <div class="row g-0">
-                            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/d/da/Hanami.png/revision/latest?cb=20200930072813&path-prefix=ru" class="img-fluid rounded-start" alt="Hanami Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Hanami</h5>
-                                    <p class="card-text">Hanami is a powerful Cursed Spirit who embodies nature.</p>
-                                    <ul class="list-unstyled">
-                                        <li><strong>Role:</strong> Antagonist</li>
-                                        <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
-                                        <li><strong>Physical Strength:</strong> Very high</li>
-                                        <li><strong>Cursed Energy:</strong> High, uses nature-based attacks</li>
-                                        <li><strong>Notable Skills:</strong> Plant manipulation, regenerative abilities, high resilience</li>
-                                    </ul>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-10 mb-4">
-                        <div class="card">
-                          <div class="row g-0">
-                            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/3/3e/Mahito.png/revision/latest?cb=20201029130721&path-prefix=ru" class="img-fluid rounded-start" alt="Mahito Image">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mahito</h5>
-                                    <p class="card-text">Mahito is a malevolent Cursed Spirit with the ability to manipulate souls.</p>
-                                    <ul class="list-unstyled">
-                                        <li><strong>Role:</strong> Antagonist</li>
-                                        <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
-                                        <li><strong>Physical Strength:</strong> High</li>
-                                        <li><strong>Cursed Energy:</strong> High, specializes in body manipulation</li>
-                                        <li><strong>Notable Skills:</strong> Soul manipulation, body modification, regeneration</li>
-                                    </ul>
-                                </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Fushiguro Megumi</h5>
+                                <p class="card-text">Megumi Fushiguro is a student at Jujutsu High with a powerful Cursed Technique.</p>
+                                <ul class="list-unstyled">
+                                    <li><strong>Role:</strong> Student at Jujutsu High</li>
+                                    <li><strong>Rank:</strong> Grade 2 Sorcerer</li>
+                                    <li><strong>Physical Strength:</strong> High</li>
+                                    <li><strong>Cursed Energy:</strong> High, specializes in Shikigami Summoning</li>
+                                    <li><strong>Ability:</strong> Mastery of Ten Shadows Technique, summoning Shikigami</li>
+                                    <li><strong>Notable Skills:</strong> Strategic combat, strong Shikigami, skilled in Cursed Techniques</li>
+                                </ul>
                             </div>
                         </div>
                       </div>
                     </div>
-                </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 offset-md-8"> <!-- Смещение на 8 колонок для выравнивания вправо -->
-                        <h2>Videos</h2>
-                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/TC8BoupS4G0?si=0lfxkySpQoaycGsb&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="425" src="https://www.youtube.com/embed/5IjYcUs0D9M?si=oKnadoGBYsDksLcG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="370" src="https://www.youtube.com/embed/_nsxgSzEcT4?si=GHqizBYL9kDJTtl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>       
-                        <iframe width="100%" height="420" src="https://www.youtube.com/embed/dY00S96046o?si=mw0p5Fp_uUfYXiM5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/qUVwHl1d21g?si=ylWsswH5Oq_11ipB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="370" src="https://www.youtube.com/embed/LH71JsdEFt8?si=LROBJdECGqNm-m4_&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
-                        <iframe width="100%" height="390" src="https://www.youtube.com/embed/2QXZJ9EB99o?si=KtOol00xa-jNrbTc&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="390" src="https://www.youtube.com/embed/Vqiw6HOhe7c?si=kXaf45iOVYpcPKOq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/rcKc-u0FrOs?si=ZCnYmqWMUsHrEk5y&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="380" src="https://www.youtube.com/embed/daoRWdyQ7OY?si=qCFRUizMruUy4QMi&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="100%" height="390" src="https://www.youtube.com/embed/8xyJtEDt2u0?si=v79UXiGxsfEjkVFr&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+            <!-- Видео справа -->
+            <div class="col-md-6 mb-4">
+                <iframe width="100%" height="360" src="https://www.youtube.com/embed/5IjYcUs0D9M?si=oKnadoGBYsDksLcG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        
+    
+        <!-- Третий блок: Карточка слева, видео справа -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/7d/Nobara_Kugisaki_%28Volume_3%29.png/revision/latest/scale-to-width-down/250?cb=20200604153117" class="img-fluid rounded-start" alt="Kugisaki Nobara Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Kugisaki Nobara</h5>
+                            <p class="card-text">Nobara Kugisaki is a student at Jujutsu High with a unique approach to Cursed Techniques.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Student at Jujutsu High</li>
+                                <li><strong>Rank:</strong> Grade 2 Sorcerer</li>
+                                <li><strong>Physical Strength:</strong> Strong</li>
+                                <li><strong>Cursed Energy:</strong> High, specializes in Straw Doll Techniques</li>
+                                <li><strong>Ability:</strong> Mastery of Straw Doll Cursed Technique, uses nails and hammer</li>
+                                <li><strong>Notable Skills:</strong> Fearless combat style, strong resolve, effective Cursed Techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+        <!-- Видео справа -->
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="360" src="https://www.youtube.com/embed/_nsxgSzEcT4?si=GHqizBYL9kDJTtl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/79/Yuta_Okkotsu_%28Chapter_137%29.png/revision/latest?cb=20210206114343&path-prefix=ru" class="img-fluid rounded-start" alt="Okkotsu Yuta Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Okkotsu Yuta</h5>
+                            <p class="card-text">Yuta Okkotsu is a former student at Jujutsu High and a powerful Sorcerer.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Former Student at Jujutsu High</li>
+                                <li><strong>Rank:</strong> Special Grade Sorcerer</li>
+                                <li><strong>Physical Strength:</strong> Exceptional</li>
+                                <li><strong>Cursed Energy:</strong> Extremely high, wielder of Rika Orimoto’s Curse</li>
+                                <li><strong>Ability:</strong> Mastery of Rika Orimoto’s Curse, powerful Cursed Energy manipulation</li>
+                                <li><strong>Notable Skills:</strong> Immense cursed energy, formidable combat abilities, strong protective curse</li>
+                            </ul>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+        <!-- Видео справа -->
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="360" src="https://www.youtube.com/embed/dY00S96046o?si=mw0p5Fp_uUfYXiM5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex justify-content-center align-items-center">
+                      <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/d/d8/Toge_Inumaki_%28Prequel%29.png/revision/latest?cb=20201028145231&path-prefix=ru" class="img-fluid rounded-start" alt="Inumaki Toge Image">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">Inumaki Toge</h5>
+                          <p class="card-text">Toge Inumaki is a student at Jujutsu High who uses his Cursed Speech Technique to control others.</p>
+                          <ul class="list-unstyled">
+                              <li><strong>Role:</strong> Student at Jujutsu High</li>
+                              <li><strong>Rank:</strong> Grade 2 Sorcerer</li>
+                              <li><strong>Physical Strength:</strong> Moderate</li>
+                              <li><strong>Cursed Energy:</strong> High, specializes in Cursed Speech</li>
+                              <li><strong>Ability:</strong> Mastery of Cursed Speech, can compel actions through words</li>
+                              <li><strong>Notable Skills:</strong> Strategic use of language, effective support role in battles</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Видео справа -->
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="335" src="https://www.youtube.com/embed/qUVwHl1d21g?si=ylWsswH5Oq_11ipB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://i.pinimg.com/originals/4c/73/f2/4c73f276273af4875fea08a2f66b5ad2.png" class="img-fluid rounded-start" alt="Zenin Maki Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Zenin Maki</h5>
+                            <p class="card-text">Maki Zenin is a student at Jujutsu High known for her exceptional combat skills and physical prowess.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Student at Jujutsu High</li>
+                                <li><strong>Rank:</strong> Grade 2 Sorcerer</li>
+                                <li><strong>Physical Strength:</strong> Exceptional</li>
+                                <li><strong>Cursed Energy:</strong> Moderate, relies on physical strength and weapons</li>
+                                <li><strong>Notable Skills:</strong> Mastery of combat techniques, strong physical abilities, proficient in cursed tools</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+           <!-- Видео справа -->
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="310" src="https://www.youtube.com/embed/LH71JsdEFt8?si=LROBJdECGqNm-m4_&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/9/9a/Toji_Fushiguro.png/revision/latest?cb=20201104084033&path-prefix=ru" class="img-fluid rounded-start" alt="Fushiguro Toji Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Fushiguro Toji</h5>
+                            <p class="card-text">Toji Fushiguro is a former Jujutsu Sorcerer known for his exceptional combat skills and cursed technique.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Former Sorcerer</li>
+                                <li><strong>Rank:</strong> Special Grade Sorcerer</li>
+                                <li><strong>Physical Strength:</strong> Extraordinary</li>
+                                <li><strong>Cursed Energy:</strong> Low, utilizes physical prowess and cursed tools</li>
+                                <li><strong>Notable Skills:</strong> Mastery of combat techniques, skilled in using cursed tools, great strategic mind</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Видео справа -->
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="310" src="https://www.youtube.com/embed/xqSsszNdjEk?si=xmjFgZPgAm8H6DC7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+       
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://static.wikia.nocookie.net/fiction-characters-battle/images/a/a9/Ryomen_Sukuna.png/revision/latest?cb=20220103131855&path-prefix=ru" class="img-fluid rounded-start" alt="Sukuna Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Sukuna</h5>
+                            <p class="card-text">Sukuna is a powerful Cursed Spirit and the King of Curses.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Main Antagonist</li>
+                                <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
+                                <li><strong>Physical Strength:</strong> Extremely high</li>
+                                <li><strong>Cursed Energy:</strong> Extremely high, formidable Cursed Techniques</li>
+                                <li><strong>Notable Skills:</strong> Mastery of various Cursed Techniques, immense combat power, regeneration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="310" src="https://www.youtube.com/embed/Vqiw6HOhe7c?si=kXaf45iOVYpcPKOq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/7/72/Jogo_manga.png/revision/latest?cb=20201207113644&path-prefix=ru" class="img-fluid rounded-start" alt="Jogo Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Jogo</h5>
+                            <p class="card-text">Jogo is a powerful Cursed Spirit known for his volcanic powers.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Antagonist</li>
+                                <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
+                                <li><strong>Physical Strength:</strong> Very high</li>
+                                <li><strong>Cursed Energy:</strong> High, specializes in fire-based attacks</li>
+                                <li><strong>Notable Skills:</strong> Volcanic abilities, high durability, destructive power</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="287" src="https://www.youtube.com/embed/rcKc-u0FrOs?si=ZCnYmqWMUsHrEk5y&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/d/da/Hanami.png/revision/latest?cb=20200930072813&path-prefix=ru" class="img-fluid rounded-start" alt="Hanami Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Hanami</h5>
+                            <p class="card-text">Hanami is a powerful Cursed Spirit who embodies nature.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Antagonist</li>
+                                <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
+                                <li><strong>Physical Strength:</strong> Very high</li>
+                                <li><strong>Cursed Energy:</strong> High, uses nature-based attacks</li>
+                                <li><strong>Notable Skills:</strong> Plant manipulation, regenerative abilities, high resilience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+                <!-- Видео справа -->
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="287" src="https://www.youtube.com/embed/daoRWdyQ7OY?si=qCFRUizMruUy4QMi&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
             
-    </main>
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                        <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/3/3e/Mahito.png/revision/latest?cb=20201029130721&path-prefix=ru" class="img-fluid rounded-start" alt="Mahito Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Mahito</h5>
+                            <p class="card-text">Mahito is a malevolent Cursed Spirit with the ability to manipulate souls.</p>
+                            <ul class="list-unstyled">
+                                <li><strong>Role:</strong> Antagonist</li>
+                                <li><strong>Rank:</strong> Special Grade Cursed Spirit</li>
+                                <li><strong>Physical Strength:</strong> High</li>
+                                <li><strong>Cursed Energy:</strong> High, specializes in body manipulation</li>
+                                <li><strong>Notable Skills:</strong> Soul manipulation, body modification, regeneration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <iframe width="100%" height="287" src="https://www.youtube.com/embed/8xyJtEDt2u0?si=v79UXiGxsfEjkVFr&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+   </main>
+
+   <section id="form" class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Feedback Form</h2>
+            <form action="#" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="feedback" class="form-label">Feedback:</label>
+                    <textarea class="form-control" id="feedback" name="feedback" rows="4" placeholder="Share your feedback" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Rating:</label>
+                    <select class="form-select" id="rating" name="rating">
+                        <option selected disabled>Select a rating</option>
+                        <option value="1">1 - Poor</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="3">3 - Good</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="5">5 - Excellent</option>
+                    </select>
+                </div>
+                <!-- Отступ между формой и кнопкой -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-4Xxv5m+DzLkHneR2MSs1dK5/+U1gEBNDTtyRA8cHfK6C5m7Ki73HbdQRSQ+GnU3Q" crossorigin="anonymous"></script>
 </body>
 </html>
