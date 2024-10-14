@@ -1,160 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jujutsu Kaisen WIKI</title>
-    <link rel="stylesheet" href="styles5.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: url("https://wallpapercat.com/w/full/0/f/4/24693-3840x2160-desktop-4k-jujutsu-kaisen-tv-series-background-photo.jpg") center/cover no-repeat fixed;
+            margin: 0;
+            padding: 0;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        #fixed-sidebar {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid white;
+            border-radius: 10px;
+            display: none; /* Hidden by default for small screens */
+        }
+
+        @media (min-width: 768px) {
+            #fixed-sidebar {
+                display: block; /* Visible only for medium screens and above */
+            }
+        }
+
+        main {
+            padding-top: 20px;
+        }
+
+        .card-text {
+            color: black;
+        }
+
+        #footer {
+            text-align: center;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid white;
+            width: 40%;
+            margin: 20px auto;
+        }
+
+        #dateTime {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            color: black;
+}
+	
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 1000;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .popup input,
+        .popup textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .popup button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+
+        .popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+	
+	.overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+    </style>
 </head>
+
 <body>
-    <header>
+    <div id="dateTime"></div>
+    <header class="text-center p-4">
         <h1>Jujutsu Kaisen WIKI</h1>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="JJK.html" target="_blank">Main</a></li>  
-                <li><a href="JJK2.html" target="_blank">Characters</a></li>  
-                <li><a href="3.html" target="_blank">Gege Akutami</a></li>
-                <li><a href="4.html" target="_blank">History of Creation</a></li>
-                <li><a href="6.html" target="_blank">Anime Season 3</a></li>
-            </ul>
-        </nav>
     </header>
-    
-    <nav id="fixed-sidebar">
-        <ul>
-            <li><a href="#section1">Info</a></li>
-            <li><a href="#section2">Ranking</a></li>
-            <li><a href="#footer">About</a></li>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">JJK WIKI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="2.html">Characters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="1.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3.html">Gege Akutami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="4.html">History of Creation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="6.html">Anime Season 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="5.html">Popularity Ranking</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="fixed-sidebar" class="bg-secondary position-fixed p-4 rounded" style="top: 50%; right: 20px; transform: translateY(-50%);">
+        <ul class="list-unstyled">
+            <li><a class="text-light" href="#section1">Info</a></li>
+            <li><a class="text-light" href="#section2">Ranking</a></li>
+            <li><a class="text-light" href="#footer">About</a></li>
         </ul>
     </nav>
-    
-    <main>
-        <section id="section1">
-            <h2>Info</h2>
+
+    <main class="container py-5">
+        <section id="section1" class="mb-5">
+            <h2 class="mb-4">Info</h2>
             <p>
                 "Jujutsu Kaisen" is a popular Japanese manga series written and illustrated by Gege Akutami. 
                 It was first serialized in Shueisha's Weekly Shōnen Jump in March 2018. The story follows Yuji Itadori, 
                 a high school student who joins a secret organization of jujutsu sorcerers to eliminate a powerful curse 
                 named Ryomen Sukuna after becoming his vessel. The series has gained widespread popularity due to its 
-                intense action, deep characters, and unique curse-related storyline. We serve as a WIKI page and present 
-                you with manga's character popularity ranking.
+                intense action, deep characters, and unique curse-related storyline.
             </p>
         </section>
 
-        <section id="section2">
-            <h2>Ranking</h2>
-            
-            <article>
-                <h3>1. Satoru Gojo</h3>
-                <figure>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREm5H1fDFItJ1-_029akB1eB4A1Vz1hX3EfwLABLvYSrm6oBNW-KKoZUCHAeXdc7-gtEk&usqp=CAU" alt="Satoru Gojo">
-                    <figcaption>
-                        Satoru Gojo is the strongest jujutsu sorcerer. He possesses an immense amount of cursed energy 
-                        and has mastered several powerful techniques, making him one of the most respected and feared figures in the world of Jujutsu Kaisen.
-                    </figcaption>
-                </figure>
-            </article>
+        <section id="section2" class="row">
+            <h2 class="mb-4">Ranking</h2>
 
-            <article>
-                <h3>2. Megumi Fushiguro</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/474x/bc/6d/6d/bc6d6df4f7f7e39282a6a1af9ca501d1.jpg" alt="Megumi Fushiguro">
-                    <figcaption>
-                        Megumi Fushiguro is a skilled sorcerer from the Zenin clan with remarkable potential. His Ten Shadows technique allows him to summon powerful shikigami to assist him in battle.
-                    </figcaption>
-                </figure>
-            </article>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREm5H1fDFItJ1-_029akB1eB4A1Vz1hX3EfwLABLvYSrm6oBNW-KKoZUCHAeXdc7-gtEk&usqp=CAU" class="card-img-top" alt="Satoru Gojo">
+                    <div class="card-body">
+                        <h5 class="card-title">1. Satoru Gojo</h5>
+                        <p class="card-text">Satoru Gojo is the strongest jujutsu sorcerer. He possesses immense cursed energy and powerful techniques.</p>
+                    </div>
+                </div>
+            </div>
 
-            <article>
-                <h3>3. Yuji Itadori</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/736x/d4/98/7d/d4987d84727f0989e7feeb5109695393.jpg" alt="Yuji Itadori">
-                    <figcaption>
-                        Yuji Itadori is the main protagonist of Jujutsu Kaisen. After becoming the vessel of Ryomen Sukuna, he strives to protect people from curses while grappling with his own moral dilemmas.
-                    </figcaption>
-                </figure>
-            </article>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/474x/bc/6d/6d/bc6d6df4f7f7e39282a6a1af9ca501d1.jpg" class="card-img-top" alt="Megumi Fushiguro">
+                    <div class="card-body">
+                        <h5 class="card-title">2. Megumi Fushiguro</h5>
+                        <p class="card-text">Megumi Fushiguro, a skilled sorcerer from the Zenin clan, uses the Ten Shadows technique to summon shikigami.</p>
+                    </div>
+                </div>
+            </div>
 
-            <article>
-                <h3>4. Yuta Okkotsu</h3>
-                <figure>
-                    <img src="https://64.media.tumblr.com/115b3fab76eb49d56280c85764da673f/5ea27c02ab04f5d1-20/s540x810/f6ed79ba7a68fb5d59386a11450909be44113ebe.png" alt="Yuta Okkotsu">
-                    <figcaption>
-                        Yuta Okkotsu is a powerful jujutsu sorcerer who wields the cursed spirit of his childhood friend, Rika. His talent in jujutsu makes him one of the most promising sorcerers in the world.
-                    </figcaption>
-                </figure>
-            </article>
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/d4/98/7d/d4987d84727f0989e7feeb5109695393.jpg" class="card-img-top" alt="Yuji Itadori">
+                    <div class="card-body">
+                        <h5 class="card-title">3. Yuji Itadori</h5>
+                        <p class="card-text">Yuji Itadori, the main protagonist, is the vessel of Ryomen Sukuna, balancing a battle against curses with personal dilemmas.</p>
+                    </div>
+                </div>
+            </div>
 
-            <article>
-                <h3>5. Ryomen Sukuna</h3>
-                <figure>
-                    <img src="https://64.media.tumblr.com/6a32dfdf6166d93a5ce294205ab7fe8c/4a904ad58e8c98e6-0f/s1280x1920/35aeea7d10c1bfb0ff112a427210cc2b3fd80725.png" alt="Ryomen Sukuna">
-                    <figcaption>
-                        Ryomen Sukuna is a fearsome curse, often referred to as the King of Curses. He is one of the primary antagonists of the series, possessing unparalleled power and evil intent.
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article>
-                <h3>6. Kugisaki Nobara</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/474x/74/b5/96/74b59634234a3afd3b749126012c6d9f.jpg" alt="Kugisaki Nobara">
-                    <figcaption>
-                        Kugisaki Nobara is a headstrong and confident sorcerer. Her ability to use cursed nails and a straw doll makes her a formidable opponent.
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article>
-                <h3>7. Maki Zenin</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/originals/29/73/14/2973141f7d60f3df31ab6765e9475691.jpg" alt="Maki Zenin">
-                    <figcaption>
-                        Maki Zenin is a member of the Zenin clan with no innate cursed energy, but her superior physical abilities and mastery of cursed tools make her a powerful fighter.
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article>
-                <h3>8. Kento Nanami</h3>
-                <figure>
-                    <img src="https://i.pinimg.com/originals/53/8a/cf/538acf37ca61c72fb3ce7e62e87006ad.png" alt="Kento Nanami">
-                    <figcaption>
-                        Kento Nanami is a pragmatic and skilled jujutsu sorcerer. His calm demeanor and precise cursed techniques make him a valuable ally to Yuji and the others.
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article>
-                <h3>9. Aoi Todo</h3>
-                <figure>
-                    <img src="https://pbs.twimg.com/media/GAlwDVfaQAAhwNK.jpg" alt="Aoi Todo">
-                    <figcaption>
-                        Aoi Todo is an eccentric and powerful sorcerer known for his physical prowess. His boisterous personality contrasts with his highly strategic approach to fighting.
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article>
-                <h3>10. Mei Mei</h3>
-                <figure>
-                    <img src="https://64.media.tumblr.com/d51027f14800a93410eef4c5349fc5ed/9dccb3b31b59fd12-ff/s250x400/8169112bac28e55d4246b01d8a66138bb6d7fbd2.png" alt="Mei Mei">
-                    <figcaption>
-                        Mei Mei is a highly intelligent and calm sorcerer. Her ability to use crows as cursed tools adds to her mystique and lethality in battle.
-                    </figcaption>
-                </figure>
-            </article>
-            
         </section>
     </main>
 
-    <hr>
+    <div class="text-center">
+        <button id="subscribeBtn" class="btn btn-primary">Subscribe</button>
+    </div>
 
-    <footer id="footer">
+    <div id="popup" class="popup">
+        <span id="closePopup" class="close-btn">&times;</span>
+        <h2>Subscribe</h2>
+        <form>
+            <input type="text" placeholder="Enter your name" required>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <footer id="footer" class="text-center py-4 bg-dark text-light">
         <p>Nurkassym Bolat <br>Aday Jarzhanov <br> Rakhat Tuknazarov</p>
         <p>09.09.2024</p>
     </footer>
-</body>
-</html>
 
-              
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function updateDateTime() {
+            const dateTimeElement = document.getElementById("dateTime");
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+            dateTimeElement.innerHTML = formattedDate;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        updateDateTime();
+        setInterval(updateDateTime, 60000);
+
+        const subscribeBtn = document.getElementById("subscribeBtn");
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+        const closePopupBtn = document.getElementById("closePopup");
+
+        subscribeBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+            overlay.style.display = "block";
+        });
+
+        closePopupBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>

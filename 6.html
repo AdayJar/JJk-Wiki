@@ -1,25 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jujutsu Kaisen WIKI</title>
-    <link rel="stylesheet" href="styles6.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url("https://wallpapers-clan.com/wp-content/uploads/2024/04/jujutsu-kaisen-gojo-sky-aesthetic-desktop-wallpaper-preview.jpg") center/cover no-repeat fixed;
+            margin: 0;
+            padding: 0;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .side-nav {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            width: 175px;
+            height: 150px;
+            border: 2px solid white;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        .side-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .side-nav a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            margin-right: 200px;
+            padding: 20px;
+        }
+
+        figure {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        figure img {
+            border: 5px solid white;
+            width: 450px;
+            margin-right: 15px;
+            border-radius: 10px;
+        }
+
+        figcaption {
+            max-width: 500px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #dateTime {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+            color: black;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 1000;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .popup input,
+        .popup textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .popup button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+
+        .popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+    </style>
 </head>
+
 <body>
-    <header>
+    <div id="dateTime"></div>
+    <header class="text-center p-4">
         <h1>Jujutsu Kaisen WIKI</h1>
-        <nav>
-            <ul>
-                <li><a href="JJK.html" target="_blank">Main</a></li>  
-                <li><a href="JJK2.html" target="_blank">Characters</a></li>  
-                <li><a href="3.html" target="_blank">Gege Akutami</a></li>
-                <li><a href="4.html" target="_blank">History of Creation</a></li>
-                <li><a href="5.html" target="_blank">Popularity Ranking</a></li>
-            </ul>
-        </nav>
     </header>
-    <nav class="side-nav">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">JJK WIKI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#section1">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section2">Main Info</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section3">Anime Season 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="side-nav d-none d-md-block">
         <ul>
             <li><a href="#section1">Introduction</a></li>
             <li><a href="#section2">Main Info</a></li>
@@ -27,62 +186,135 @@
             <li><a href="#footer">About</a></li>
         </ul>
     </nav>
-    <main>
-        <section id="section1">
-            <h2>Jujutsu Kaisen season 3: release date speculation, trailer, and everything we know so far</h2>
+
+    <main class="container py-5">
+        <section id="section1" class="mb-5">
+            <h2 class="mb-4">Jujutsu Kaisen season 3: release date speculation, trailer, and everything we know so far</h2>
             <p>
-                "Jujutsu Kaisen" is a popular Japanese manga series written and illustrated by Gege Akutami. 
-                It was first serialized in Shueisha's Weekly Shōnen Jump in March 2018. The story follows Yuji Itadori, 
-                a high school student who joins a secret organization of jujutsu sorcerers to eliminate a powerful curse 
-                named Ryomen Sukuna after becoming his vessel. The series has gained widespread popularity due to its 
-                intense action, deep characters, and unique curse-related storyline.
+                "Jujutsu Kaisen" is a popular Japanese manga series written and illustrated by Gege Akutami. It was first serialized in Shueisha's Weekly Shōnen Jump in March 2018. The story follows Yuji Itadori, a high school student who joins a secret organization of jujutsu sorcerers to eliminate a powerful curse named Ryomen Sukuna after becoming his vessel.
             </p>
             <p>
-                Jujutsu Kaisen season 3 is officially on the way and, while it's still early, we know the hit anime will adapt the manga's Culling Games arc. <br>
-                Whether you're a newcomer or well-versed in the source material, we're here to guide you through the essentials and other confirmed news surrounding Jujutsu Kaisen season 3. <br>
-                On top of that, we've got our very own release date speculation, a look at the very first teaser trailer, a glance ahead to which manga chapters it could adapt, and the list of cast members who may (or may not) return.
+                Jujutsu Kaisen season 3 is officially on the way and, while it's still early, we know the hit anime will adapt the manga's Culling Games arc.
             </p>
         </section>
-        <section id="section2">
-            <h2>Main Info</h2>
-            <figure>
-                <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/04/yuji-fushiguro-and-yuta-culling-game-arc.jpg" alt="Yuji, Fushiguro, and Yuta in Culling Game Arc">
-                <figcaption>
-                    Jujutsu Kaisen season 3 was announced after the culmination of Jujutsu Kaisen season 2, AKA the Shibuya Incident arc – which aired from July 2023 to December 2023. <br>
-                    Given the scope of the next story arc, expect a similarly sized season and, unfortunately, a similar wait to the gap between seasons one and two (around two years). <br>
-                    The first teaser appears to be early sketch work and a release window hasn’t been announced, which usually doesn’t bode well for any hopes of it releasing in 2024. Expect 2025 to be the earliest release window for Jujutsu Kaisen season 3. Given that MAPPA is currently working on the Chainsaw Man movie, 2026 may even be more realistic.
-                </figcaption>
-            </figure>
+
+        <section id="section2" class="row">
+            <h2 class="mb-4">Main Info</h2>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/04/yuji-fushiguro-and-yuta-culling-game-arc.jpg" class="card-img-top" alt="Yuji, Fushiguro, and Yuta in Culling Game Arc">
+                    <div class="card-body">
+                        <h5 class="card-title">Main Info</h5>
+                        <p class="card-text">Jujutsu Kaisen season 3 is set to adapt the Culling Games arc after the Shibuya Incident arc in season 2.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/b/b7/Pseudo-Geto_shows_Prison_Realm_to_Yuji_%28Anime%29.png" class="card-img-top" alt="Pseudo-Geto shows Prison Realm to Yuji">
+                    <div class="card-body">
+                        <h5 class="card-title">The Prison Realm</h5>
+                        <p class="card-text">The Prison Realm plays a central role in the Shibuya Incident arc, where Gojo was sealed away.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://www.comingsoon.net/wp-content/uploads/sites/3/2023/12/jjk-yuki-tsukumo.png?w=1024" class="card-img-top" alt="Yuki Tsukumo">
+                    <div class="card-body">
+                        <h5 class="card-title">The Culling Games</h5>
+                        <p class="card-text">Season 3 will adapt the Culling Games arc, which involves Itadori’s Extermination and the battle royale.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section id="section3">
-            <h2>Jujutsu Kaisen season 3 story: what’s happened and what chapters will be adapted next?</h2>
-            <figure>
-                <img src="https://static.wikia.nocookie.net/jujutsu-kaisen/images/b/b7/Pseudo-Geto_shows_Prison_Realm_to_Yuji_%28Anime%29.png/revision/latest?cb=20231228205953" alt="Pseudo-Geto shows Prison Realm to Yuji">
-                <figcaption>
-                    Jujutsu Kaisen season 3 will follow on from the Shibuya Incident, which saw ‘Geto’ and Mahito attempt to seal away Gojo for good. <br>
-                    Unfortunately for them, it didn’t quite go to plan. As a veil envelops Shibuya, the likes of Yuji and Megumi helping turn the tide against the villains. Choso, the third Death Painting sibling, tried to seek revenge against Yuji, but stopped short of killing his foe after seeing visions of his brother – and Yuji. <br>
-                    The Shibuya Incident wasn’t without some casualties, however: Nanami is killed by Mahito, while Nobara is seriously wounded and presumed dead.
-                </figcaption>
-            </figure>
-            <p>
-                The end of the Shibuya Arc saw ‘Geto’/Kenjaku awaken several non-sorcerers (those who had ingested cursed objects or had latent abilities of their own, including a certain Tsumiki Fushiguro). That’s all part of a plan to have sorcerers and non-sorcerers kill each other. Later, Gojo is exiled from Jujutsu society, with Yuji being sentenced to death – and swordsman Yuta (who you may remember from the Jujutsu Kaisen 0 movie) named as his executioner.
-            </p>
-            <figure>
-                <img src="https://www.comingsoon.net/wp-content/uploads/sites/3/2023/12/jjk-yuki-tsukumo.png?w=1024" alt="Yuki Tsukumo">
-                <figcaption>
-                    What's next? Jujutsu Kaisen season 3 is all set to adapt the Culling Games arc of the manga (chapters 159-221), but before that, there are a few briefer story arcs to cover. <br>
-                    Itadori’s Extermination (chapters 137-143) kicked off at the tail-end of Jujutsu Kaisen season 2, and its story is self-evident: it’ll hinge on the death – or attempted execution, anyway – of Yuji. Then, season 3 will likely move on to the Perfect Preparation arc (chapters 144-158), which will see our band of sorcerers prepare for the Culling Games – a tournament arc-of-sorts that acts as a mega Jujutsu battle royale. Fun times ahead! <br>
-                    Seeing as how season 2 covered around 70 chapters and season 3 will aim for 80+, we expect some things to be cut for time so we get a 23 or 24-episode season.
-                </figcaption>
-            </figure>
+            <h2>Jujutsu Kaisen season 3 trailer</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/04/jujutsu-kaisen-culling-game.jpg" class="d-block w-100" alt="Season 3 teaser image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/04/yuji-fushiguro-and-yuta-culling-game-arc.jpg" class="d-block w-100" alt="Culling Games Arc image">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/07/screenshot-2024-07-22-at-1-25-28-pm.jpg" class="d-block w-100" alt="Culling Games Arc action scene">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
-        <h2>Jujutsu Kaisen season 3 trailer</h2>
-        <p>The first Jujutsu Kaisen season 3 trailer is very brief, clocking in at only 20 seconds long and serving only to announce that the Culling Games arc will be adapted. <br>
-        It may not be a lot, but at least the short clip shows some of Jujutsu’s key players in sketch form – including 'Geto' and Yuji. Watch it for yourself above!</p>
     </main>
-    <footer id="footer">
-        <p>Nurkassym Bolat <br>Aday Jarzhanov<br> Rakhat Tuknazarov</p>
+
+    <div class="text-center">
+        <button id="subscribeBtn" class="btn btn-primary">Subscribe</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <span id="closePopup" class="close-btn">&times;</span>
+        <h2>Subscribe</h2>
+        <form>
+            <input type="text" placeholder="Enter your name" required>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div id="overlay" class="overlay"></div>
+
+    <footer id="footer" class="text-center py-4 bg-dark text-light">
+        <p>Nurkassym Bolat <br>Aday Jarzhanov <br> Rakhat Tuknazarov</p>
         <p>09.09.2024</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function updateDateTime() {
+            const dateTimeElement = document.getElementById("dateTime");
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+            dateTimeElement.innerHTML = formattedDate;
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+
+        const subscribeBtn = document.getElementById("subscribeBtn");
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+        const closePopupBtn = document.getElementById("closePopup");
+
+        subscribeBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+            overlay.style.display = "block";
+        });
+
+        closePopupBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+
+        overlay.addEventListener("click", () => {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+    </script>
 </body>
+
 </html>

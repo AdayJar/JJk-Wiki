@@ -39,12 +39,4 @@ th, td {
     max-width: 100%; 
     height: auto; 
 }
-footer {
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
+
