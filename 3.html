@@ -12,9 +12,17 @@
             object-fit: cover;
             margin-bottom: 15px;
         }
+        /* Additional styles for dynamic content change */
+        #dynamicText {
+            font-weight: bold;
+            color: red;
+        }
+        .bg-change {
+            transition: background-color 0.5s ease;
+        }
     </style>
 </head>
-<body class="bg-dark text-white">
+<body class="bg-dark text-white bg-change">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <a class="navbar-brand" href="#">Jujutsu Kaisen</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,41 +63,36 @@
             <div class="col-lg-8 col-md-7">
                 <section>
                     <h2>Biography</h2>
-                    <p>Gege Akutami is a mysterious figure in the world of manga. Born in Iwate Prefecture, Japan, Akutami has chosen to keep their real name and birthdate private, adding an enigmatic aura to their persona. The creator of the popular manga *Jujutsu Kaisen*, Akutami’s debut series has taken the world by storm since its launch in 2018.</p>
-
-                    <h2>Career Beginnings</h2>
-                    <p>Akutami began their career in the manga industry by working as an assistant for established manga artists. They gained valuable experience in storytelling, character development, and world-building during these early years. Akutami's first one-shot, titled *Kamishiro Sōsa*, was published in 2014, and while it didn’t gain significant attention, it laid the foundation for their future success.</p>
-
-                    <h2>Breakthrough with <i>Jujutsu Kaisen</i></h2>
-                    <p>The real breakthrough came with the serialization of *Jujutsu Kaisen* in *Weekly Shōnen Jump* in 2018. The series quickly gained a massive following for its dark themes, complex characters, and innovative world-building. Set in a universe where cursed spirits and sorcery play a central role, the story revolves around Yuji Itadori, a high school student who becomes involved with curses after consuming a cursed object – the finger of Sukuna, a powerful and dangerous curse.</p>
-                    <p>The success of *Jujutsu Kaisen* led to an anime adaptation, which only boosted the manga's popularity further, earning Akutami international recognition.</p>
-
-                    <blockquote class="blockquote">
-                        <p class="mb-0">"I draw manga because I want to express complex emotions and explore the darker side of human nature. Curses are an embodiment of that." – Gege Akutami</p>
-                    </blockquote>
+                    <p id="dynamicText">Gege Akutami is a mysterious figure in the world of manga...</p>
                 </section>
             </div>
         </div>
 
-        <!-- Аккордеон с заголовками -->
+        <!-- Dynamic styling and text modification -->
+        <div class="text-center mt-5">
+            <button id="colorChangeButton" class="btn btn-primary">Change Background Color</button>
+            <button id="textChangeButton" class="btn btn-secondary">Change Text Color</button>
+        </div>
+
+        <!-- Accordion section with additional information -->
         <div class="mt-5">
             <h3>More Information</h3>
             <div class="faq-item">
                 <h5 class="faq-question">Inspirations and Style</h5>
                 <p class="faq-answer" style="display: none;">
-                    Akutami cites several key influences in their work, including Yoshihiro Togashi, the creator of *Yu Yu Hakusho* and *Hunter x Hunter*. Like Togashi, Akutami blends action, supernatural elements, and psychological depth in their storytelling. The use of dark fantasy, horror, and mysticism in *Jujutsu Kaisen* sets it apart from other mainstream manga.
+                    Akutami cites several key influences in their work, including Yoshihiro Togashi, the creator of *Yu Yu Hakusho* and *Hunter x Hunter*. Like Togashi, Akutami blends action, supernatural elements, and psychological depth in their storytelling.
                 </p>
             </div>
             <div class="faq-item">
                 <h5 class="faq-question">Philosophy and Themes</h5>
                 <p class="faq-answer" style="display: none;">
-                    At its core, *Jujutsu Kaisen* explores deep philosophical questions about life, death, and the nature of humanity. The concept of "curses" in the series is not just a supernatural element but a metaphor for the emotional and psychological burdens people carry. Akutami delves into the consequences of negative emotions like fear, anger, and hatred, and how they manifest in destructive ways.
+                    At its core, *Jujutsu Kaisen* explores deep philosophical questions about life, death, and the nature of humanity. The concept of "curses" in the series is not just a supernatural element but a metaphor for the emotional and psychological burdens people carry.
                 </p>
             </div>
             <div class="faq-item">
                 <h5 class="faq-question">Future Projects</h5>
                 <p class="faq-answer" style="display: none;">
-                    While *Jujutsu Kaisen* is still ongoing, Akutami has expressed interest in continuing to explore new themes and stories within the dark fantasy genre. Despite the enormous success, they remain humble, focusing on the craft of storytelling rather than fame.
+                    While *Jujutsu Kaisen* is still ongoing, Akutami has expressed interest in continuing to explore new themes and stories within the dark fantasy genre.
                 </p>
             </div>
         </div>
@@ -102,6 +105,25 @@
     </div>
 
     <script>
+        // DOM Manipulation for background color change
+        document.getElementById('colorChangeButton').addEventListener('click', function() {
+            document.body.classList.toggle('bg-light');
+            document.body.classList.toggle('bg-dark');
+            document.body.classList.toggle('text-dark');
+            document.body.classList.toggle('text-white');
+        });
+
+        // DOM Manipulation for text color change
+        document.getElementById('textChangeButton').addEventListener('click', function() {
+            const dynamicText = document.getElementById('dynamicText');
+            if (dynamicText.style.color === 'red') {
+                dynamicText.style.color = 'blue';
+            } else {
+                dynamicText.style.color = 'red';
+            }
+        });
+
+        // FAQ accordion functionality
         const faqItems = document.querySelectorAll('.faq-item');
 
         faqItems.forEach(item => {

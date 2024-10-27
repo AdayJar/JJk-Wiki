@@ -22,6 +22,14 @@
         .btn-change-color {
             margin-top: 20px;
         }
+
+        /* Additional styling for the new features */
+        .hidden-content {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
     </style>
 </head>
 <body id="pageBody">
@@ -65,6 +73,13 @@
             </div>
         </div>
 
+        <!-- New buttons for event handling and dynamic content -->
+        <div class="text-center mt-4">
+            <button id="toggleContentButton" class="btn btn-secondary">Toggle Hidden Content</button>
+            <p id="hiddenContent" class="hidden-content">This is some additional hidden content that can be toggled!</p>
+        </div>
+
+        <!-- Color change button remains -->
         <div class="text-center btn-change-color">
             <button id="changeColorBtn" class="btn btn-primary">Change Background Color</button>
         </div>
@@ -83,6 +98,12 @@
         document.getElementById("changeColorBtn").addEventListener("click", function () {
             document.body.style.backgroundColor = colorArray[i];
             i = (i + 1) % colorArray.length;
+        });
+
+        // New event handler for toggling hidden content
+        document.getElementById('toggleContentButton').addEventListener('click', function() {
+            const content = document.getElementById('hiddenContent');
+            content.classList.toggle('show');
         });
     </script>
 
