@@ -7,64 +7,104 @@
     <title>Jujutsu Kaisen WIKI</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         body {
-            background: url("https://wallpapercat.com/w/full/0/f/4/24693-3840x2160-desktop-4k-jujutsu-kaisen-tv-series-background-photo.jpg") center/cover no-repeat fixed;
+            background: url("https://wallpapercave.com/wp/wp9511111.png") center bottom fixed no-repeat ;
+            background-color: #d03638;
+            background-size: 1300px;
             margin: 0;
             padding: 0;
-            color: black;
-            font-family: Arial, sans-serif;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
         }
 
-        #fixed-sidebar {
-            background-color: rgba(0, 0, 0, 0.7);
-            border: 2px solid white;
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e2d3a;
+            font-weight: 700;
+        }
+
+        .navbar-dark .navbar-brand, .navbar-dark .nav-link {
+            color: #f7f7f7;
+        }
+
+            .navbar-dark .nav-link:hover {
+                color: #d03638;
+            }
+
+        .side-nav {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            width: 175px;
+            border: 2px solid #fff;
             border-radius: 10px;
-            display: none; /* Hidden by default for small screens */
+            text-align: center;
+            display: none;
         }
 
         @media (min-width: 768px) {
-            #fixed-sidebar {
-                display: block; /* Visible only for medium screens and above */
+            .side-nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
 
-        main {
-            padding-top: 20px;
+        .side-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .side-nav a {
+            color: #f7f7f7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .side-nav a:hover {
+                color: #325e8f;
+            }
+
+        .card {
+            background-color: #ffffffcc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .card-text {
-            color: black;
+            color: #333;
         }
 
         #footer {
-            text-align: center;
+            background-color: #333;
+            color: #f7f7f7;
+            padding: 10px;
         }
 
         hr {
             border: none;
-            border-top: 2px solid white;
+            border-top: 2px solid #f7f7f7;
             width: 40%;
             margin: 20px auto;
         }
 
-        #dateTime {
-            font-size: 1.2em;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 10px;
-            color: black;
-}
-	
         .popup {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: white;
-            border: 3px solid black;
+            background-color: #ffffff;
+            border: 3px solid #333;
             border-radius: 10px;
             padding: 20px;
             z-index: 1000;
@@ -72,41 +112,40 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
-        .popup form {
-            display: flex;
-            flex-direction: column;
-        }
+            .popup form {
+                display: flex;
+                flex-direction: column;
+            }
 
-        .popup input,
-        .popup textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
+            .popup input, .popup button {
+                margin-bottom: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ddd;
+                font-size: 16px;
+            }
 
-        .popup button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+            .popup button {
+                background-color: #007bff;
+                color: #fff;
+                cursor: pointer;
+                font-weight: bold;
+            }
 
-        .popup button:hover {
-            background-color: #0056b3;
-        }
+                .popup button:hover {
+                    background-color: #0056b3;
+                }
 
-        .popup .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-	
-	.overlay {
+            .popup .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                font-size: 20px;
+                color: #333;
+            }
+
+        .overlay {
             display: none;
             position: fixed;
             top: 0;
@@ -117,172 +156,277 @@
             z-index: 999;
         }
 
+        .star {
+            cursor: pointer;
+            font-size: 30px;
+            color: gray;
+        }
+
+            .star.selected {
+                color: gold;
+            }
+
+        #dateTime {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: left;
+            margin-top: 5px;
+            margin-left: 15px;
+            color: #1e2d3a;
+        }
+
+        .active {
+            outline: 1.5px dashed #d03638;
+        }
     </style>
 </head>
 
 <body>
-    <div id="dateTime"></div>
-    <header class="text-center p-4">
-        <h1>Jujutsu Kaisen WIKI</h1>
-    </header>
+    <section id="section4">
+        <div id="dateTime"></div>
+        <header class="text-center p-4">
+            <h1>Jujutsu Kaisen WIKI</h1>
+        </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">JJK WIKI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="JJK2.html">Characters</a></li>
-                    <li class="nav-item"><a class="nav-link" href="JJK.html">Main</a></li>
-                    <li class="nav-item"><a class="nav-link" href="3.html">Gege Akutami</a></li>
-                    <li class="nav-item"><a class="nav-link" href="4.html">History of Creation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="6.html">Anime Season 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="5.html">Popularity Ranking</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">JJK WIKI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="2.html">Characters</a></li>
+                        <li class="nav-item"><a class="nav-link" href="1.html">Main</a></li>
+                        <li class="nav-item"><a class="nav-link" href="3.html">Gege Akutami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="4.html">History of Creation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="6.html">Anime Season 3</a></li>
+                        <li class="nav-item"><a class="nav-link" href="5.html">Popularity Ranking</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </section id="section4">
+
+        <nav class="side-nav d-none d-md-flex">
+            <ul id="sideNavMenu">
+                <li><a href="#section4">Top</a></li>
+                <li><a href="#section1">Info</a></li>
+                <li><a href="#section2">Ranking</a></li>
+                <li><a href="#section3">About</a></li>
+
+            </ul>
+        </nav>
+
+        <main class="container py-5">
+            <section id="section1" class="mb-5">
+                <h2 class="mb-4">Info</h2>
+                <p>
+                    "Jujutsu Kaisen" is a widely acclaimed Japanese manga series created by Gege Akutami, which has gained significant popularity both in Japan and internationally.<br> The story is set in a world where curses, born from human malice and negative emotions, threaten the lives of innocent people.<br> The narrative primarily follows Yuji Itadori, a high school student with exceptional physical abilities and a kind heart.
+                </p>
+            </section>
+
+            <section id="section2">
+                <h2 class="mb-4">Ranking</h2>
+                <select id="statusFilter" class="form-select mb-4" onchange="applyStatusFilter()">
+                    <option value="all">All</option>
+                    <option value="alive">Alive</option>
+                    <option value="dead">Dead</option>
+                </select>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card" data-status="dead">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREm5H1fDFItJ1-_029akB1eB4A1Vz1hX3EfwLABLvYSrm6oBNW-KKoZUCHAeXdc7-gtEk&usqp=CAU" class="card-img-top" alt="Satoru Gojo">
+                            <div class="card-body">
+                                <h5 class="card-title">1. Satoru Gojo</h5>
+                                <p class="card-text">Satoru Gojo is the strongest jujutsu sorcerer with immense cursed energy and powerful techniques.</p>
+                                <div class="rating">
+                                    <span class="star" data-star="1">&#9733;</span>
+                                    <span class="star" data-star="2">&#9733;</span>
+                                    <span class="star" data-star="3">&#9733;</span>
+                                    <span class="star" data-star="4">&#9733;</span>
+                                    <span class="star" data-star="5">&#9733;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card" data-status="alive">
+                            <img src="https://i.pinimg.com/474x/bc/6d/6d/bc6d6df4f7f7e39282a6a1af9ca501d1.jpg" class="card-img-top" alt="Megumi Fushiguro">
+                            <div class="card-body">
+                                <h5 class="card-title">2. Megumi Fushiguro</h5>
+                                <p class="card-text">A skilled sorcerer from the Zenin clan, Megumi uses the Ten Shadows technique to summon shikigami.</p>
+                                <div class="rating">
+                                    <span class="star" data-star="1">&#9733;</span>
+                                    <span class="star" data-star="2">&#9733;</span>
+                                    <span class="star" data-star="3">&#9733;</span>
+                                    <span class="star" data-star="4">&#9733;</span>
+                                    <span class="star" data-star="5">&#9733;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card" data-status="alive">
+                            <img src="https://i.pinimg.com/736x/d4/98/7d/d4987d84727f0989e7feeb5109695393.jpg" class="card-img-top" alt="Yuji Itadori">
+                            <div class="card-body">
+                                <h5 class="card-title">3. Yuji Itadori</h5>
+                                <p class="card-text">Yuji Itadori, the main protagonist, balances battling curses with personal dilemmas as Sukuna's vessel.</p>
+                                <div class="rating">
+                                    <span class="star" data-star="1">&#9733;</span>
+                                    <span class="star" data-star="2">&#9733;</span>
+                                    <span class="star" data-star="3">&#9733;</span>
+                                    <span class="star" data-star="4">&#9733;</span>
+                                    <span class="star" data-star="5">&#9733;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="text-center my-4">
+            <button id="subscribeBtn" class="btn btn-primary">Subscribe</button>
         </div>
-    </nav>
 
-    <nav id="fixed-sidebar" class="bg-secondary position-fixed p-4 rounded" style="top: 50%; right: 20px; transform: translateY(-50%);">
-        <ul class="list-unstyled">
-            <li><a class="text-light" href="#section1">Info</a></li>
-            <li><a class="text-light" href="#section2">Ranking</a></li>
-            <li><a class="text-light" href="#footer">About</a></li>
-        </ul>
-    </nav>
+        <div id="popup" class="popup">
+            <span id="closePopup" class="close-btn">&times;</span>
+            <h2>Subscribe</h2>
+            <form id="subscribeForm" novalidate>
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <input type="email" id="emailInput" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div id="overlay" class="overlay"></div>
 
-    <main class="container py-5">
-        <section id="section1" class="mb-5">
-            <h2 class="mb-4">Info</h2>
-            <p>
-                "Jujutsu Kaisen" is a popular Japanese manga series written and illustrated by Gege Akutami. 
-                It was first serialized in Shueisha's Weekly Shōnen Jump in March 2018. The story follows Yuji Itadori, 
-                a high school student who joins a secret organization of jujutsu sorcerers to eliminate a powerful curse 
-                named Ryomen Sukuna after becoming his vessel. The series has gained widespread popularity due to its 
-                intense action, deep characters, and unique curse-related storyline.
-            </p>
-        </section>
+        <section id="section3">
+            <footer id="footer" class="text-center py-2">
+                <p>Nurkassym Bolat<br> Aday Jarzhanov<br> Rakhat Tuknazarov</p>
+                <p>18.10.2024</p>
+            </footer>
+        </section id="section3">
 
-        <section id="section2" class="row">
-            <h2 class="mb-4">Ranking</h2>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                const form = document.querySelector("#subscribeForm");
+                const nameInput = document.querySelector("#nameInput");
+                const emailInput = document.querySelector("#emailInput");
+                const subscribeBtn = document.querySelector("#subscribeBtn");
+                const popup = document.querySelector("#popup");
+                const closePopup = document.querySelector("#closePopup");
+                const overlay = document.querySelector("#overlay");
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREm5H1fDFItJ1-_029akB1eB4A1Vz1hX3EfwLABLvYSrm6oBNW-KKoZUCHAeXdc7-gtEk&usqp=CAU" class="card-img-top" alt="Satoru Gojo">
-                    <div class="card-body">
-                        <h5 class="card-title">1. Satoru Gojo</h5>
-                        <p class="card-text">Satoru Gojo is the strongest jujutsu sorcerer. He possesses immense cursed energy and powerful techniques.</p>
-                    </div>
-                </div>
-            </div>
+                function showPopup() {
+                    popup.style.display = "block";
+                    overlay.style.display = "block";
+                }
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="https://i.pinimg.com/474x/bc/6d/6d/bc6d6df4f7f7e39282a6a1af9ca501d1.jpg" class="card-img-top" alt="Megumi Fushiguro">
-                    <div class="card-body">
-                        <h5 class="card-title">2. Megumi Fushiguro</h5>
-                        <p class="card-text">Megumi Fushiguro, a skilled sorcerer from the Zenin clan, uses the Ten Shadows technique to summon shikigami.</p>
-                    </div>
-                </div>
-            </div>
+                function hidePopup() {
+                    popup.style.display = "none";
+                    overlay.style.display = "none";
+                }
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/d4/98/7d/d4987d84727f0989e7feeb5109695393.jpg" class="card-img-top" alt="Yuji Itadori">
-                    <div class="card-body">
-                        <h5 class="card-title">3. Yuji Itadori</h5>
-                        <p class="card-text">Yuji Itadori, the main protagonist, is the vessel of Ryomen Sukuna, balancing a battle against curses with personal dilemmas.</p>
-                    </div>
-                </div>
-            </div>
+                function validateEmail(email) {
+                    return email.includes("@");
+                }
 
-        </section>
-    </main>
+                subscribeBtn.addEventListener("click", showPopup);
+                closePopup.addEventListener("click", hidePopup);
+                overlay.addEventListener("click", hidePopup);
 
-    <div class="text-center">
-        <button id="subscribeBtn" class="btn btn-primary">Subscribe</button>
-    </div>
+                form.addEventListener("submit", (event) => {
+                    const nameValue = nameInput.value.trim();
+                    const emailValue = emailInput.value.trim();
 
-    <div id="popup" class="popup">
-        <span id="closePopup" class="close-btn">&times;</span>
-        <h2>Subscribe</h2>
-        <form>
-            <input type="text" placeholder="Enter your name" required>
-            <input id="email" type="email" placeholder="Enter your email" required>
-            <button onclick="
-            
-            ""submit">Subscribe</button>
-        </form>
-    </div>
-    <div id="overlay" class="overlay"></div>
+                    if (!nameValue) {
+                        event.preventDefault();
+                        alert("Name missing");
+                    } else if (!validateEmail(emailValue)) {
+                        event.preventDefault();
+                        alert("Proper email address missing");
+                    }
+                });
 
-    <footer id="footer" class="text-center py-4 bg-dark text-light">
-        <p>Nurkassym Bolat <br>Aday Jarzhanov <br> Rakhat Tuknazarov</p>
-        <p>09.09.2024</p>
-    </footer>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const statusFilter = document.getElementById("statusFilter");
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                    const savedStatus = localStorage.getItem("statusFilter");
+                    if (savedStatus) {
+                        statusFilter.value = savedStatus;
+                    }
+                    applyStatusFilter();
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                    statusFilter.addEventListener("change", () => {
+                        const selectedStatus = statusFilter.value;
+                        localStorage.setItem("statusFilter", selectedStatus);
+                        applyStatusFilter();
+                    });
+                });
 
-    <script>
-        function updateDateTime() {
-            const dateTimeElement = document.getElementById("dateTime");
-            const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-            const formattedDate = now.toLocaleDateString('en-US', options);
-            dateTimeElement.innerHTML = formattedDate;
-        }
-        
-        setInterval(updateDateTime, 1000);
-        updateDateTime();
+                function applyStatusFilter() {
+                    const selectedStatus = document.getElementById("statusFilter").value;
+                    const characters = document.querySelectorAll(".card");
 
-        function abdabda() {
-            const subscribeBtn = document.getElementById("subscribeBtn");
-        const popup = document.getElementById("popup");
-        const overlay = document.getElementById("overlay");
-        const closePopupBtn = document.getElementById("closePopup");
-    
-        subscribeBtn.addEventListener("click", () => {
-            const emailInput = document.getElementById('email');
-            const nameInput = document.getElementById('name');
-            const email = emailInput.value.trim();
-            const name = nameInput.value.trim();
-    
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
-            // Проверка имени
-            if (name === "") {
-                alert("Пожалуйста, введите ваше имя.");
-                return false;
-            }
-    
-            // Проверка email
-            if (!emailPattern.test(email)) {
-                alert("Пожалуйста, введите действительный адрес электронной почты.");
-                return false;
-            }
-    
-            // Если email и имя валидны, показываем попап
-            popup.style.display = "block";
-            overlay.style.display = "block";
-        });
-    
-        closePopupBtn.addEventListener("click", () => {
-            popup.style.display = "none";
-            overlay.style.display = "none";
-        });
-    
-        overlay.addEventListener("click", () => {
-            popup.style.display = "none";
-            overlay.style.display = "none";
-        });
-        }
-    </script>
-    
+                    characters.forEach(character => {
+                        const status = character.getAttribute("data-status");
+                        if (selectedStatus === "all" || status === selectedStatus) {
+                            character.style.display = "block";
+                        } else {
+                            character.style.display = "none";
+                        }
+                    });
+                }
+
+                const stars = document.querySelectorAll('.star');
+                stars.forEach(star => {
+                    star.addEventListener('click', function () {
+                        const rating = this.getAttribute('data-star');
+                        const parentRating = this.parentElement;
+
+                        parentRating.querySelectorAll('.star').forEach(s => s.classList.remove('selected'));
+
+                        for (let i = 0; i < rating; i++) {
+                            parentRating.children[i].classList.add('selected');
+                        }
+                    });
+                });
+
+                function updateDateTime() {
+                    document.getElementById("dateTime").innerHTML = new Date().toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                    });
+                }
+
+                updateDateTime();
+                setInterval(updateDateTime, 60000);
+
+                const sideNavItems = document.querySelectorAll('#sideNavMenu li');
+                let currentSideIndex = 0;
+
+                function setSideFocus(index) {
+                    sideNavItems.forEach((item, i) => {
+                        item.querySelector('a').classList.toggle('active', i === index);
+                    });
+                    sideNavItems[index].querySelector('a').focus();
+                }
+
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'ArrowDown') {
+                        currentSideIndex = (currentSideIndex + 1) % sideNavItems.length;
+                        setSideFocus(currentSideIndex);
+                        event.preventDefault();
+                    } else if (event.key === 'ArrowUp') {
+                        currentSideIndex = (currentSideIndex - 1 + sideNavItems.length) % sideNavItems.length;
+                        setSideFocus(currentSideIndex);
+                        event.preventDefault();
+                    }
+                });
+            </script>
 
 </body>
-
 </html>

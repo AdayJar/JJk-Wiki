@@ -128,27 +128,25 @@ footer {
 }
 /* Стиль для всплывающего окна */
 #popup-overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
+/* Стиль для окна регистрации */
 #popup {
-    background-color: #fff;
-    color: #333;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
-    text-align: center;
-    max-width: 300px;
-    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 #popup input[type="text"] {
@@ -204,6 +202,12 @@ header nav {
 
 .rotate {
     animation: rotate 0.3s forwards; /* Время анимации 0.3 секунды */
+}
+#logout-button {
+    display: none;
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
 
