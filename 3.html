@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gege Akutami - Biography and Career</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         img {
@@ -12,29 +13,39 @@
             object-fit: cover;
             margin-bottom: 15px;
         }
-        /* Additional styles for dynamic content change */
+        /* Дополнительные стили для динамического контента */
         #dynamicText {
             font-weight: bold;
-            color: red;
         }
         .bg-change {
             transition: background-color 0.5s ease;
+        }
+        /* Стили для футера */
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body class="bg-dark text-white bg-change">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <a class="navbar-brand" href="#">Jujutsu Kaisen</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="JJK.html">Main</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="JJK2.html">Characters</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="3.html">Gege Akutami</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="4.html">History of Creation</a>
@@ -63,67 +74,101 @@
             <div class="col-lg-8 col-md-7">
                 <section>
                     <h2>Biography</h2>
-                    <p id="dynamicText">Gege Akutami is a mysterious figure in the world of manga...</p>
+                    <p id="dynamicText">Gege Akutami is a Japanese manga artist best known as the creator of the popular series Jujutsu Kaisen. Akutami prefers to keep their identity private, making details about their background a mystery.
+
+                        Jujutsu Kaisen has become a sensation, captivating audiences with its unique blend of martial arts, mysticism, and philosophical reflections on life, death, and humanity. Akutami draws inspiration from influential creators like Yoshihiro Togashi, the author of Yu Yu Hakusho and Hunter x Hunter. Like Togashi, Akutami balances intense action with psychological depth, making their work both thrilling and thought-provoking.
+                        
+                        Today, Jujutsu Kaisen remains one of the most popular manga and anime series worldwide, inspiring fans around the globe.</p>
                 </section>
             </div>
         </div>
 
-        <!-- Dynamic styling and text modification -->
+        <!-- Кнопка для смены темы -->
         <div class="text-center mt-5">
-            <button id="colorChangeButton" class="btn btn-primary">Change Background Color</button>
-            <button id="textChangeButton" class="btn btn-secondary">Change Text Color</button>
+            <button id="colorChangeButton" class="btn btn-primary">Change Theme</button>
         </div>
 
-        <!-- Accordion section with additional information -->
+        <!-- Раздел с дополнительной информацией -->
         <div class="mt-5">
             <h3>More Information</h3>
             <div class="faq-item">
                 <h5 class="faq-question">Inspirations and Style</h5>
                 <p class="faq-answer" style="display: none;">
-                    Akutami cites several key influences in their work, including Yoshihiro Togashi, the creator of *Yu Yu Hakusho* and *Hunter x Hunter*. Like Togashi, Akutami blends action, supernatural elements, and psychological depth in their storytelling.
+                    Akutami cites several key influences in their work, including Yoshihiro Togashi, the creator of <em>Yu Yu Hakusho</em> and <em>Hunter x Hunter</em>. Like Togashi, Akutami blends action, supernatural elements, and psychological depth in their storytelling.
                 </p>
             </div>
             <div class="faq-item">
                 <h5 class="faq-question">Philosophy and Themes</h5>
                 <p class="faq-answer" style="display: none;">
-                    At its core, *Jujutsu Kaisen* explores deep philosophical questions about life, death, and the nature of humanity. The concept of "curses" in the series is not just a supernatural element but a metaphor for the emotional and psychological burdens people carry.
+                    At its core, <em>Jujutsu Kaisen</em> explores deep philosophical questions about life, death, and the nature of humanity. The concept of "curses" in the series is not just a supernatural element but a metaphor for the emotional and psychological burdens people carry.
                 </p>
             </div>
             <div class="faq-item">
                 <h5 class="faq-question">Future Projects</h5>
                 <p class="faq-answer" style="display: none;">
-                    While *Jujutsu Kaisen* is still ongoing, Akutami has expressed interest in continuing to explore new themes and stories within the dark fantasy genre.
+                    While <em>Jujutsu Kaisen</em> is still ongoing, Akutami has expressed interest in continuing to explore new themes and stories within the dark fantasy genre.
                 </p>
             </div>
         </div>
 
+        <!-- Футер -->
         <footer class="bg-dark text-white text-center p-3 mt-4 rounded">
-            <p>Aday Jarzhanov Nurkasym Bolat Rakhat Tuknazarov.</p>
+            <p>Aday Jarzhanov, Nurkasym Bolat, Rakhat Tuknazarov.</p>
             <p>&copy; All rights reserved.</p>
             <p>Date: September 2024</p>
         </footer>
+        
     </div>
 
     <script>
-        // DOM Manipulation for background color change
+        // Функция для применения темы
+        function applyTheme(theme) {
+            const isDark = theme === 'dark';
+    
+            // Изменение классов для body
+            document.body.classList.toggle('bg-dark', isDark);
+            document.body.classList.toggle('bg-light', !isDark);
+            document.body.classList.toggle('text-white', isDark);
+            document.body.classList.toggle('text-dark', !isDark);
+    
+            // Изменение классов для контейнера
+            const container = document.querySelector('.container');
+            container.classList.toggle('bg-dark', !isDark);
+            container.classList.toggle('bg-light', isDark);
+            container.classList.toggle('text-dark', isDark);
+            container.classList.toggle('text-white', !isDark);
+
+            // Изменение классов для футера
+            const footer = document.querySelector('footer');
+            footer.classList.toggle('bg-dark', isDark);
+            footer.classList.toggle('bg-light', !isDark);
+            footer.classList.toggle('text-white', isDark);
+            footer.classList.toggle('text-dark', !isDark);
+
+            // Изменение классов для навбара
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('navbar-dark', isDark);
+            navbar.classList.toggle('navbar-light', !isDark);
+            navbar.classList.toggle('bg-dark', isDark);
+            navbar.classList.toggle('bg-light', !isDark);
+    
+            // Сохраняем текущую тему в localStorage
+            localStorage.setItem('theme', theme);
+        }
+    
+        // Применение сохраненной темы при загрузке
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            applyTheme(savedTheme);
+        });
+    
+        // Переключение темы по нажатию на кнопку
         document.getElementById('colorChangeButton').addEventListener('click', function() {
-            document.body.classList.toggle('bg-light');
-            document.body.classList.toggle('bg-dark');
-            document.body.classList.toggle('text-dark');
-            document.body.classList.toggle('text-white');
+            const currentTheme = document.body.classList.contains('bg-dark') ? 'light' : 'dark';
+            applyTheme(currentTheme);
         });
 
-        // DOM Manipulation for text color change
-        document.getElementById('textChangeButton').addEventListener('click', function() {
-            const dynamicText = document.getElementById('dynamicText');
-            if (dynamicText.style.color === 'red') {
-                dynamicText.style.color = 'blue';
-            } else {
-                dynamicText.style.color = 'red';
-            }
-        });
-
-        // FAQ accordion functionality
+        // Функциональность аккордеона FAQ
         const faqItems = document.querySelectorAll('.faq-item');
 
         faqItems.forEach(item => {
@@ -137,7 +182,9 @@
         });
     </script>
 
+    <!-- Подключение Bootstrap JS и зависимостей -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Убедитесь, что версия Bootstrap JS соответствует вашей версии CSS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

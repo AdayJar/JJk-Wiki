@@ -40,3 +40,20 @@ th, td {
     height: auto; 
 }
 
+#time-display {
+    text-align: center; /* Центрируем текст */
+    font-size: 2rem; /* Увеличиваем размер шрифта */
+    margin-top: 20px; /* Добавляем отступ сверху */
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.rotate {
+    animation: rotate 0.3s forwards; /* Время анимации 0.3 секунды */
+}

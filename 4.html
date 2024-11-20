@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Creation History and Release Dates of "Jujutsu Kaisen"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creation History and Release Dates of Jujutsu Kaisen</title>
+    <!-- Подключение Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            transition: background-color 0.5s ease;
+            transition: background-color 0.5s ease, color 0.5s ease;
         }
 
         img {
@@ -19,52 +20,104 @@
             margin-bottom: 15px;
         }
 
-        .btn-change-color {
-            margin-top: 20px;
-        }
-
-        /* Additional styling for the new features */
+        /* Дополнительные стили для динамического контента */
         .hidden-content {
             display: none;
         }
         .show {
             display: block;
         }
+
+        /* Стили для плавного перехода */
+        .bg-change {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        /* Общие стили для футера */
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        /* Фиксированные стили для элементов списка */
+        .list-group-item {
+            background-color: #f8f9fa; /* Светлый фон */
+            color: #212529; /* Темный текст */
+            border: none;
+        }
+
+        /* Убедимся, что текст внутри элементов списка не меняет цвет */
+        .list-group-item p,
+        .list-group-item strong {
+            color: #212529;
+        }
+
+        #myAudio {
+            display: none;
+        }
     </style>
 </head>
-<body id="pageBody">
-
+<body class="bg-dark text-white bg-change">
+    <!-- Навигационная панель -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <a class="navbar-brand" href="#">Jujutsu Kaisen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="JJK.html">Main</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="JJK2.html">Characters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="3.html">Gege Akutami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="4.html">History of Creation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="5.html">Popularity Ranking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="6.html">Anime Season 3</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="container bg-light p-4 rounded shadow-lg">
+    <!-- Основной контент -->
+    <div class="container bg-light text-dark p-4 rounded shadow-lg">
         <header class="text-center mb-4">
-            <h1>Creation History and Release Dates of Jujutsu Kaisen</h1>
+            <h1>Creation History and Release Dates of "Jujutsu Kaisen"</h1>
         </header>
 
         <div class="row">
             <div class="col-lg-4 col-md-5 mb-3">
                 <img src="https://m.media-amazon.com/images/I/81TmHlRleJL._SL1500_.jpg" 
-                     alt="Main Characters of Jujutsu Kaisen" class="img-fluid rounded">
-                <figcaption class="text-center mt-2">The cover of the first volume. Shueisha, 2018</figcaption>
+                     alt="Main characters of Jujutsu Kaisen" class="img-fluid rounded">
+                <figcaption class="text-center mt-2">Cover of the first volume. Shueisha, 2018</figcaption>
             </div>
 
             <div class="col-lg-8 col-md-7">
                 <section>
                     <h2>Creation History</h2>
-                    <p>"Jujutsu Kaisen" is the brainchild of manga artist Gege Akutami...</p>
+                    <p>"Jujutsu Kaisen" is a Japanese manga series written and illustrated by Gege Akutami...</p>
 
                     <h2>Development Process</h2>
-                    <p>During the development of *Jujutsu Kaisen*, Akutami aimed to create...</p>
+                    <p>During the development of <em>Jujutsu Kaisen</em>, Akutami aimed to create...</p>
 
                     <h2>Release Dates and Milestones</h2>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><strong>March 2018:</strong> The first chapter was published...</li>
-                        <li class="list-group-item"><strong>December 2019:</strong> The manga reached 2 million copies...</li>
-                        <li class="list-group-item"><strong>October 2020:</strong> The anime adaptation premiered...</li>
-                        <li class="list-group-item"><strong>March 2021:</strong> A movie adaptation was announced...</li>
-                        <li class="list-group-item"><strong>June 2023:</strong> The second season of the anime began airing...</li>
+                        <li class="list-group-item"><strong>December 2019:</strong> An anime adaptation was announced...</li>
+                        <li class="list-group-item"><strong>October 2020:</strong> The anime series premiered...</li>
+                        <li class="list-group-item"><strong>March 2021:</strong> A feature film was announced...</li>
+                        <li class="list-group-item"><strong>July 2023:</strong> The second season of the anime began airing...</li>
                     </ul>
 
                     <h2>Future Plans</h2>
@@ -73,41 +126,97 @@
             </div>
         </div>
 
-        <!-- New buttons for event handling and dynamic content -->
+        <!-- Кнопка для смены темы -->
         <div class="text-center mt-4">
-            <button id="toggleContentButton" class="btn btn-secondary">Toggle Hidden Content</button>
-            <p id="hiddenContent" class="hidden-content">This is some additional hidden content that can be toggled!</p>
+            <button id="colorChangeButton" class="btn btn-primary">Change Theme</button>
         </div>
 
-        <!-- Color change button remains -->
-        <div class="text-center btn-change-color">
-            <button id="changeColorBtn" class="btn btn-primary">Change Background Color</button>
+        <!-- Кнопка для скрытого контента -->
+        <div class="text-center mt-4">
+            <button id="toggleContentButton" class="btn btn-secondary">Show Additional Information</button>
+            <p id="hiddenContent" class="hidden-content mt-3">MAHORAGA!</p>
         </div>
 
+        <audio id="myAudio" src="MAHORAGAAAA HELP MEE.mp3"></audio>
+
+        <!-- Футер -->
         <footer class="bg-dark text-white text-center p-3 mt-4 rounded">
-            <p>Aday Jarzhanov Nurkasym Bolat Rakhat Tuknazarov.</p>
+            <p>Aday Jarzhanov, Nurkasym Bolat, Rakhat Tuknazarov.</p>
             <p>&copy; All rights reserved.</p>
             <p>Date: September 2024</p>
         </footer>
     </div>
 
+    <!-- Скрипты -->
     <script>
-        const colorArray = ["#0DC2FF", "#007DE8", "#0E5DFF", "#0C28EB", "#1600FF"];
-        let i = 0;
+        var audio = document.getElementById('myAudio');
+        // Функция для применения темы
+        function applyTheme(theme) {
+            const isDark = theme === 'dark';
 
-        document.getElementById("changeColorBtn").addEventListener("click", function () {
-            document.body.style.backgroundColor = colorArray[i];
-            i = (i + 1) % colorArray.length;
+            // Изменение классов для body
+            document.body.classList.toggle('bg-dark', isDark);
+            document.body.classList.toggle('bg-light', !isDark);
+            document.body.classList.toggle('text-white', isDark);
+            document.body.classList.toggle('text-dark', !isDark);
+
+            // Изменение классов для контейнера
+            const container = document.querySelector('.container');
+            container.classList.toggle('bg-dark', !isDark);
+            container.classList.toggle('bg-light', isDark);
+            container.classList.toggle('text-dark', isDark);
+            container.classList.toggle('text-white', !isDark);
+
+            // Изменение классов для футера
+            const footer = document.querySelector('footer');
+            footer.classList.toggle('bg-dark', isDark);
+            footer.classList.toggle('bg-light', !isDark);
+            footer.classList.toggle('text-white', isDark);
+            footer.classList.toggle('text-dark', !isDark);
+
+            // Изменение классов для навбара
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('navbar-dark', isDark);
+            navbar.classList.toggle('navbar-light', !isDark);
+            navbar.classList.toggle('bg-dark', isDark);
+            navbar.classList.toggle('bg-light', !isDark);
+
+            // Сохраняем текущую тему в localStorage
+            localStorage.setItem('theme', theme);
+        }
+
+        // Применение сохраненной темы при загрузке
+        document.addEventListener("DOMContentLoaded", function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            applyTheme(savedTheme);
         });
 
-        // New event handler for toggling hidden content
+        // Переключение темы по нажатию на кнопку
+        document.getElementById('colorChangeButton').addEventListener('click', function() {
+            const currentTheme = document.body.classList.contains('bg-dark') ? 'light' : 'dark';
+            applyTheme(currentTheme);
+        });
+
+        // Обработчик событий для скрытого контента
         document.getElementById('toggleContentButton').addEventListener('click', function() {
             const content = document.getElementById('hiddenContent');
             content.classList.toggle('show');
+
+            // Меняем текст на кнопке
+            if (content.classList.contains('show')) {
+                this.textContent = 'Hide Additional Information';
+                audio.play();
+            } else {
+                this.textContent = 'Show Additional Information';
+                audio.pause();
+                audio.currentTime = 0; // Сброс к началу
+            }
         });
     </script>
 
+    <!-- Подключение необходимых скриптов -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

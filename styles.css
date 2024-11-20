@@ -1,9 +1,4 @@
-body {
-    background-image: url("https://storage.yandexcloud.net/otakuy-media/post_media/b57b0dd8-91e9-11ee-9e5c-ae0176efcb1c");
-    background-size: cover; /* Для растяжения изображения на весь экран */
-    background-position: center; /* Центрирование изображения */
-    background-repeat: no-repeat; /* Избежать повторения изображения */
-}
+
 .overlay {
     background-color: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью */
     padding: 20px;
